@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌿 Plant Species Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #e6ffe6, #ccffcc);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2e7d32, #81c784);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin: 1.5rem auto;
+      text-align: center;
+    }
+
+    .nav-btn {
+      background: linear-gradient(to right, #a5d6a7, #66bb6a);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      margin: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #388e3c;
+      transform: scale(1.05);
+    }
+
+    .upload-section {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .upload-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    input[type="file"] {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    #preview {
+      margin-top: 1rem;
+      max-width: 250px;
+      border-radius: 12px;
+      border: 3px solid #66bb6a;
+      display: none;
+    }
+
+    button.classify-btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button.classify-btn:hover {
+      background: #1b5e20;
+    }
+
+    .result {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .feature-card {
+      background: linear-gradient(to right, #ffffff, #e8f5e9);
+      border-radius: 16px;
+      padding: 1.5rem;
+      width: 280px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: #388e3c;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+      overflow: hidden;
+      border: 3px solid transparent;
+    }
+
+    .card.highlight {
+      border: 3px solid #43a047;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card h3 {
+      color: #2e7d32;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e8f5e9;
+      font-size: 0.9rem;
+      color: #2e7d32;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 Plant Species Classifier</h1>
+  <p>Upload an image to detect plant species and explore details!</p>
+</header>
+
+<nav>
+  <button class="nav-btn">🏠 Home</button>
+  <button class="nav-btn">📤 Upload</button>
+  <button class="nav-btn">🔍 Detect</button>
+  <button class="nav-btn">🌱 Plants</button>
+</nav>
+
+<section class="features">
+  <div class="feature-card">
+    <h3>🎯 Accurate Detection</h3>
+    <p>Uses smart filename-matching logic for identifying the most likely plant (you can later replace this with a real ML model).</p>
+  </div>
+  <div class="feature-card">
+    <h3>⚡ Real-time Preview</h3>
+    <p>Instant image preview upon upload to give users live feedback.</p>
+  </div>
+  <div class="feature-card">
+    <h3>📚 Plant Insights</h3>
+    <p>Explore useful info about plants — climate, benefits, and more.</p>
+  </div>
+</section>
+
+<section class="upload-section">
+  <div class="upload-box">
+    <h2>📷 Upload Image</h2>
+    <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+    <br>
+    <img id="preview" />
+    <br>
+    <button class="classify-btn" onclick="classifyImage()">🔍 Classify</button>
+    <div class="result" id="resultText"></div>
+  </div>
+</section>
+
+<div class="container" id="plantCards"></div>
+
+<div class="footer">
+  🌿 Made with love by Gargi Goyal • Powered by 🌱 Plant Knowledge
+</div>
+
+<script>
+  const plants = [
+    {
+      name: "Aloe Vera",
+      image: "https://cdn.shopify.com/s/files/1/0691/8363/5772/files/Aloe_Vera_Plant3_1_600x600.jpg?v=1740762454",
+      description: "Aloe Vera is a succulent known for its medicinal gel. Best for skin care and healing."
+    },
+    {
+      name: "Eggplant",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM8jX1bWaH4pzLKVscpkensbzgpBfM-3ZVhaJkJ33qixUbazx6TAu2sXlRaTCv17ECMrA&usqp=CAU",
+      description: "Eggplant is a sun-loving vegetable used in diverse cuisines worldwide."
+    },
+    {
+      name: "Guava",
+      image: "https://dukaan.b-cdn.net/700x700/webp/upload_file_service/3a9a204e-700e-43d9-a2ab-d2214b4fb501/1.png",
+      description: "Guava is a tropical fruit packed with Vitamin C, sweet aroma, and tangy flavor."
+    },
+    {
+      name: "Mango",
+      image: "https://upload.wikimedia.org/wikipedia/commons/9/90/Hapus_Mango.jpg",
+      description: "Mangoes are rich in vitamins and grow in hot climates. King of Fruits in India!"
+    },
+    {
+      name: "Banana",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZIBxh57PqFOfla_AmBUJYiVH22Q9r0ffuw&s",
+      description: "High-potassium fruit, grows in bunches, needs tropical environment and water."
+    },
+    {
+      name: "Neem",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFeP8L2xP71tV6VR7ABDzzxRlSJxqMjiOmlQ&s",
+      description: "Medicinal tree with antibacterial uses in Ayurveda. Grows well in dry climates."
+    },
+    {
+      name: "Tulsi",
+      image: "https://www.trustbasket.com/cdn/shop/articles/Tulsi.jpg?v=1687508866",
+      description: "Holy Indian plant used in herbal teas, medicines, and spiritual rituals."
+    },
+    {
+      name: "Cactus",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfbXHWm4VBhnuJygMa0aMA5KxCvZduBQW4OnBmbq23Rc_iyHFqN-SoCwI5NZwfaSLfpH8&usqp=CAU",
+      description: "Desert plant that stores water, perfect for low-maintenance indoor gardening."
+    },
+    {
+      name: "Money Plant",
+      image: "https://images.herzindagi.info/image/2021/Dec/how-to-grow-a-money-plant-at-home.jpg",
+      description: "Believed to bring luck and wealth. Grows well in water or soil indoors."
+    }
+  ];
+
+  const container = document.getElementById("plantCards");
+  const resultText = document.getElementById("resultText");
+  const preview = document.getElementById("preview");
+
+  function previewImage() {
+    const file = document.getElementById("imageInput").files[0];
+    if (file) {
+      preview.src = URL.createObjectURL(file);
+      preview.style.display = "block";
+    }
+  }
+
+  function classifyImage() {
+    const fileInput = document.getElementById("imageInput");
+    if (!fileInput.files.length) {
+      resultText.textContent = "⚠️ Please select an image first!";
+      displayCards();
+      return;
+    }
+
+    const fileName = fileInput.files[0].name.toLowerCase();
+    let predicted = "Guava";
+
+    if (fileName.includes("mango")) predicted = "Mango";
+    else if (fileName.includes("aloe")) predicted = "Aloe Vera";
+    else if (fileName.includes("neem")) predicted = "Neem";
+    else if (fileName.includes("banana")) predicted = "Banana";
+    else if (fileName.includes("guava")) predicted = "Guava";
+    else if (fileName.includes("egg")) predicted = "Eggplant";
+    else if (fileName.includes("tulsi")) predicted = "Tulsi";
+    else if (fileName.includes("money")) predicted = "Money Plant";
+    else if (fileName.includes("cactus")) predicted = "Cactus";
+
+    resultText.textContent = `✅ Predicted Species: ${predicted}`;
+    displayCards(predicted);
+  }
+
+  function displayCards(highlightedPlant = null) {
+    container.innerHTML = "";
+    plants.forEach(plant => {
+      const card = document.createElement("div");
+      card.className = "card" + (plant.name === highlightedPlant ? " highlight" : "");
+      card.innerHTML = `
+        <img src="${plant.image}" alt="${plant.name}">
+        <div class="card-body">
+          <h3>${plant.name}</h3>
+          <p>${plant.description}</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  displayCards();
+</script>
+
+</body>
+</html>
+
