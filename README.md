@@ -106,13 +106,15 @@ Plant-Species-Classifier/
 
 ##1.Clone the repository
 
-cd Project_on_PlantSpecies_ClassificationUsingML
+  cd Project_on_PlantSpecies_ClassificationUsingML
 
 ##2.Install dependencies
-pip install -r requirements.txt
+
+  pip install -r requirements.txt
 
 ##3.Run the Streamlit app
-streamlit run Frontend/streamlit_app/app.py
+
+  streamlit run Frontend/streamlit_app/app.py
 
 ---
 
