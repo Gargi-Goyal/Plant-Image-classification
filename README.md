@@ -105,7 +105,7 @@ Plant-Species-Classifier/
 ## ▶ How to Run
 
 ##1.Clone the repository
-git clone https://github.com/Gargi-Goyal/Project_on_PlantSpecies_ClassificationUsingML.git
+git clone this repositories
 
 cd Project_on_PlantSpecies_ClassificationUsingML
 
