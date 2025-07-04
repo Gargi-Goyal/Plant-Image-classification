@@ -79,6 +79,7 @@ created a fully *dynamic frontend* using:
 ## Project Structure
 
 Plant-Species-Classifier/
+
 ├── 📄 Project-Highlights-Traditional-ML-Accuracy.pdf         #   Summary of model accuracy & highlights  
 ├── 📄 Project_on_PlantSpecies_ClassificationUsingML.pdf      #   Complete project report  
 ├── 📄 README.md                                              #   Project documentation  
