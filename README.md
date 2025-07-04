@@ -93,7 +93,6 @@ Plant-Species-Classifier/
 ├── 📄 scaler.pkl                                             #   Preprocessing - feature scaler  
 
 
-
 ---
 
 ## ▶ How to Run
