@@ -104,7 +104,7 @@ Plant-Species-Classifier/
 
 ## ▶ How to Run
 
-## 1. Clone the repository
+##1.Clone the repository
 git clone https://github.com/Gargi-Goyal/Project_on_PlantSpecies_ClassificationUsingML.git
 
 cd Project_on_PlantSpecies_ClassificationUsingML
@@ -117,7 +117,7 @@ streamlit run Frontend/streamlit_app/app.py
 
 ---
 
-##🙋 Author
+## 🙋 Developer
 
 **Gargi Goyal**  
 🔗 [LinkedIn](https://www.linkedin.com/in/gargi-goyal-047888249/)  
