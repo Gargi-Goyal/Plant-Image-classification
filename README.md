@@ -18,9 +18,10 @@ This project utilizes the *Plant Type Datasets* from Kaggle.
 ---
 ## 🔧 Tech Stack
 
-- *Frontend*: HTML, CSS, JavaScript, Streamlit
-- *Backend*: Python (Flask + Streamlit)
+- *Frontend*: HTML, CSS, JavaScript
+- *Backend*: Python (Streamlit)
 - *ML Libraries*: scikit-learn, OpenCV, NumPy, Matplotlib
+- *Model Trained*:Random Forest
 
 ---
 
@@ -70,9 +71,7 @@ This project utilizes the *Plant Type Datasets* from Kaggle.
 
 ## 🌐 Frontend + Backend Integration
 
-We created a fully *dynamic frontend* using:
-
-- *🧩 Flask Web Interface*: Accepts image uploads via HTML form, sends it to the ML model, and displays predicted species dynamically.
+created a fully *dynamic frontend* using:
 - *📊 Streamlit Frontend*: Built for faster local development and testing. It allows image uploads, live predictions, and visualization of feature maps or probabilities.
 
 ---
@@ -102,33 +101,24 @@ We created a fully *dynamic frontend* using:
 
 ## ▶ How to Run
 
-### 1. 🧠 Train Model (if not already)
+## 1. Clone the repository
+```bash
+git clone https://github.com/Gargi-Goyal/Project_on_PlantSpecies_ClassificationUsingML.git
+cd Project_on_PlantSpecies_ClassificationUsingML
 
-bash
-python model_training.py
+##2.Install dependencies
+pip install -r requirements.txt
 
-
-### 2. 🌐 Run Flask App
-
-bash
-python app.py
-
-
-Visit: http://localhost:5000/
-
-### 3. 📊 Try Streamlit Dashboard
-
-bash
-streamlit run streamlit_app.py
-
+##3.Run the Streamlit app
+streamlit run Frontend/streamlit_app/app.py
 
 ---
 
 ## 🙋 Author
 
 *Gargi Goyal*  
-B.Tech Computer Science Engineering, UPES  
-[GitHub](https://github.com/Gargi-Goyal)
+Linkedin:[🔗 GargiGoyal-LinkedIn](https://www.linkedin.com/in/gargi-goyal-047888249/)
+EmailId:Gargigoyl2712dec@gmail.com
 
 ---
 
