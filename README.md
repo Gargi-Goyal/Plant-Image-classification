@@ -82,16 +82,23 @@ created a fully *dynamic frontend* using:
 Plant-Species-Classifier/
 
 ├── 📄 Project-Highlights-Traditional-ML-Accuracy.pdf         ──▶  Summary of model accuracy & highlights  
-├── 📄 Project_on_PlantSpecies_ClassificationUsingML.pdf      ──▶  Complete project report  
+
+├── 📄 Project_on_PlantSpecies_ClassificationUsingML.ipynb      ──▶  Complete trained model 
+
 ├── 📄 README.md                                              ──▶  Project documentation  
+
 ├── 📁 website_images/                                        ──▶  Screenshots of the frontend website  
 │   ├── 🖼️ WebsiteImage1.png                                
 │   ├── 🖼️ WebsiteImage2.png                                
 │   ├── 🖼️ WebsiteImage3.png                                
-│   └── 🖼️ WebsiteImage4.png                                
+│   └── 🖼️ WebsiteImage4.png                       
+
 ├── 📄 frontend.html                                          ──▶  Frontend HTML code  
+
 ├── 📄 class_names.pkl                                        ──▶  Pickle file for label names  
+
 ├── 📄 imputer.pkl                                            ──▶  Preprocessing - missing value handler  
+
 ├── 📄 scaler.pkl                                             ──▶  Preprocessing - feature scaler  
 
 
