@@ -136,3 +136,38 @@ Feel free to fork this repository and submit a pull request.
 
 Please consider giving this repo a ⭐  
 It motivates me to grow and share more helpful and beginner-friendly projects like this!
+
+## ▶ How to Run
+
+## 1. Clone the repository
+git clone https://github.com/Gargi-Goyal/Project_on_PlantSpecies_ClassificationUsingML.git
+cd Project_on_PlantSpecies_ClassificationUsingML
+
+## 2. Install dependencies
+pip install -r requirements.txt
+
+## 3. Run the Streamlit app
+streamlit run Frontend/streamlit_app/app.py
+
+---
+
+## 🙋 Author
+
+**Gargi Goyal**  
+🔗 https://www.linkedin.com/in/gargi-goyal-047888249/  
+📧 Gargigoyal2712dec@gmail.com
+
+---
+
+## 🤝 Contributions
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork this repository and submit a pull request.
+
+---
+
+## ⭐ If You Found This Helpful
+
+Please consider giving this repo a ⭐  
+It motivates me to grow and share more helpful and beginner-friendly projects like this!
+
