@@ -83,7 +83,7 @@ Plant-Species-Classifier/
 
 ├── 📄 Project-Highlights-Traditional-ML-Accuracy.pdf         ──▶  Summary of model accuracy & highlights  
 
-├── 📄 Project_on_PlantSpecies_ClassificationUsingML.ipynb      ──▶  Complete trained model 
+├── 📄 Modal.ipynb                                             ──▶  Complete trained model 
 
 ├── 📄 README.md                                              ──▶  Project documentation  
 
@@ -105,8 +105,6 @@ Plant-Species-Classifier/
 ## ▶ How to Run
 
 ##1.Clone the repository
-
-  cd Project_on_PlantSpecies_ClassificationUsingML
 
 ##2.Install dependencies
 
