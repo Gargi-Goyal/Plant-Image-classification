@@ -105,7 +105,6 @@ Plant-Species-Classifier/
 ## ▶ How to Run
 
 ##1.Clone the repository
-git clone this repositories
 
 cd Project_on_PlantSpecies_ClassificationUsingML
 
