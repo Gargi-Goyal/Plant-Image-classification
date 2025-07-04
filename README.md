@@ -114,11 +114,11 @@ streamlit run Frontend/streamlit_app/app.py
 
 ---
 
-## 🙋 Author
+##🙋 Author
 
-*Gargi Goyal*  
-Linkedin:[GargiGoyal-LinkedIn](https://www.linkedin.com/in/gargi-goyal-047888249/)
-EmailId:Gargigoyal2712dec@gmail.com
+**Gargi Goyal**  
+🔗 [LinkedIn](https://www.linkedin.com/in/gargi-goyal-047888249/)  
+📧 [Gargigoyal2712dec@gmail.com](mailto:Gargigoyal2712dec@gmail.com)
 
 ---
 
