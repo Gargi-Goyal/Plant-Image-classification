@@ -76,23 +76,24 @@ created a fully *dynamic frontend* using:
 
 ---
 
-## 📁 Repository Structure
-
-## 📁 Project Structure
+## Project Structure
 
 Plant-Species-Classifier/
-├── 📄 Project-Highlights-Traditional-ML-Accuracy.pdf   # Summary of model accuracy & highlights  
-├── 📄 Project_on_PlantSpecies_ClassificationUsingML.pdf # Complete project report  
-├── 📄 README.md                                        # Project documentation  
-├── 📁 website_images/                                  # Screenshots of the frontend website  
+├── Project-Highlights-Traditional-ML-Accuracy.pdf      # Summary of model accuracy & highlights  
+├── Project_on_PlantSpecies_ClassificationUsingML.pdf   # Complete project report  
+├── README.md                                           # Project documentation  
+├── website_images/                                     # Screenshots of the frontend website  
 │   ├── WebsiteImage1.png  
 │   ├── WebsiteImage2.png  
 │   ├── WebsiteImage3.png  
 │   └── WebsiteImage4.png  
-├── 📄 frontend.html                                    # Frontend HTML code  
-├── 📄 class_names.pkl                                  # Pickle file for label names  
-├── 📄 imputer.pkl                                      # Preprocessing - missing value handler  
-├── 📄 scaler.pkl                                       # Preprocessing - feature scaler  
+├── frontend.html                                       # Frontend HTML code  
+├── class_names.pkl                                     # Pickle file for label names  
+├── imputer.pkl                                         # Preprocessing - missing value handler  
+├── scaler.pkl                                          # Preprocessing - feature scaler  
+
+
+
 ---
 
 ## ▶ How to Run
