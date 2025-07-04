@@ -1,9 +1,145 @@
-##Dataset Reference
-Source: [Plants Type Dataset on Kaggle] (https://www.kaggle.com/datasets/yudhaislamisulistya/plants-type-datasets)
+# 🌿 Plant Species Classification using Traditional Machine Learning
 
-Path Configuration (From Notebook)
-main_folder = r"D:/plant_species_for_ct/split_ttv_dataset_type_of_plants"
+*Achieved 92.06% test accuracy without using transfer learning or CNNs*
 
-train_folder = os.path.join(main_folder, "Train_Set_Folder") # Training data
+---
 
-test_folder = os.path.join(main_folder, "Test_Set_Folder") # Testing data
+## 🚀 Overview
+
+This project focuses on classifying plant species using handcrafted features and traditional machine learning techniques like Random Forests. It avoids transfer learning or deep CNNs to demonstrate the power of classical approaches in solving image classification problems.
+
+---
+## 📦 Dataset Used
+This project utilizes the *Plant Type Datasets* from Kaggle.
+
+🔗 [View on Kaggle](https://www.kaggle.com/datasets/yudhaislamisulistya/plants-type-datasets)  
+  📁 Downloaded file: plants-type-datasets.zip (~1 GB)
+
+---
+## 🔧 Tech Stack
+
+- *Frontend*: HTML, CSS, JavaScript, Streamlit
+- *Backend*: Python (Flask + Streamlit)
+- *ML Libraries*: scikit-learn, OpenCV, NumPy, Matplotlib
+
+---
+
+## 🔍 Techniques Used
+
+### 🎨 Feature Extraction
+
+1. *Color Features*
+   - RGB Histogram
+   - HSV Histogram
+   - LAB Histogram  
+   (Each with 512 bins)
+
+2. *Texture Features*
+   - Local Binary Patterns (LBP)
+   - Statistical descriptors: Mean, Std Deviation
+
+3. *Shape Features*
+   - Contour-based features: Area, Perimeter, Circularity
+
+4. *HOG Features*
+   - Histogram of Oriented Gradients  
+   (3,780 dimensions)
+
+---
+
+## 🧠 ML Pipeline
+
+- *Preprocessing*:
+  - Handling missing values using SimpleImputer
+  - Feature scaling using StandardScaler
+
+- *Model*:  
+  - RandomForestClassifier with n_estimators=200, max_depth=15
+
+---
+
+## 📊 Results
+
+| Metric            | Score     |
+|-------------------|-----------|
+| *Test Accuracy* | 92.06%    |
+| Precision (Avg)   | 92.1%     |
+| Recall (Avg)      | 91.8%     |
+
+---
+
+## 🌐 Frontend + Backend Integration
+
+We created a fully *dynamic frontend* using:
+
+- *🧩 Flask Web Interface*: Accepts image uploads via HTML form, sends it to the ML model, and displays predicted species dynamically.
+- *📊 Streamlit Frontend*: Built for faster local development and testing. It allows image uploads, live predictions, and visualization of feature maps or probabilities.
+
+---
+
+## 📁 Repository Structure
+
+
+├── feature_extraction.py        # Extracts color, texture, shape, HOG features
+├── model_training.py            # Trains and saves the RandomForestClassifier
+├── prediction.py                # Loads model and performs predictions
+├── app.py                       # Flask backend to serve predictions
+├── streamlit_app.py             # For real-time visualization/testing
+├── static/
+│   └── styles.css               # CSS for frontend
+├── templates/
+│   └── index.html               # HTML + JS interface for image upload
+├── dataset/
+│   ├── train/                   # Training images
+│   ├── test/                    # Testing images
+│   └── labels.csv               # Label metadata
+├── model/
+│   └── classifier.pkl           # Trained RandomForest model
+└── README.md
+
+
+---
+
+## ▶ How to Run
+
+### 1. 🧠 Train Model (if not already)
+
+bash
+python model_training.py
+
+
+### 2. 🌐 Run Flask App
+
+bash
+python app.py
+
+
+Visit: http://localhost:5000/
+
+### 3. 📊 Try Streamlit Dashboard
+
+bash
+streamlit run streamlit_app.py
+
+
+---
+
+## 🙋 Author
+
+*Gargi Goyal*  
+B.Tech Computer Science Engineering, UPES  
+[GitHub](https://github.com/Gargi-Goyal)
+
+---
+
+## 🤝 Contributions
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork this repository and submit a pull request.
+
+---
+
+## ⭐ If You Found This Helpful
+
+Please consider giving this repo a ⭐  
+It motivates me to grow and share more helpful and beginner-friendly projects like this!
