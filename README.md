@@ -117,8 +117,8 @@ streamlit run Frontend/streamlit_app/app.py
 ## 🙋 Author
 
 *Gargi Goyal*  
-Linkedin:GargiGoyal-LinkedIn
-EmailId:Gargigoyl2712dec@gmail.com
+Linkedin:[GargiGoyal-LinkedIn](https://www.linkedin.com/in/gargi-goyal-047888249/)
+EmailId:Gargigoyal2712dec@gmail.com
 
 ---
 
