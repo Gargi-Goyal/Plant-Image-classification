@@ -78,25 +78,21 @@ created a fully *dynamic frontend* using:
 
 ## 📁 Repository Structure
 
+## 📁 Project Structure
 
-├── feature_extraction.py        # Extracts color, texture, shape, HOG features
-├── model_training.py            # Trains and saves the RandomForestClassifier
-├── prediction.py                # Loads model and performs predictions
-├── app.py                       # Flask backend to serve predictions
-├── streamlit_app.py             # For real-time visualization/testing
-├── static/
-│   └── styles.css               # CSS for frontend
-├── templates/
-│   └── index.html               # HTML + JS interface for image upload
-├── dataset/
-│   ├── train/                   # Training images
-│   ├── test/                    # Testing images
-│   └── labels.csv               # Label metadata
-├── model/
-│   └── classifier.pkl           # Trained RandomForest model
-└── README.md
-
-
+Plant-Species-Classifier/
+├── 📄 Project-Highlights-Traditional-ML-Accuracy.pdf   # Summary of model accuracy & highlights  
+├── 📄 Project_on_PlantSpecies_ClassificationUsingML.pdf # Complete project report  
+├── 📄 README.md                                        # Project documentation  
+├── 📁 website_images/                                  # Screenshots of the frontend website  
+│   ├── WebsiteImage1.png  
+│   ├── WebsiteImage2.png  
+│   ├── WebsiteImage3.png  
+│   └── WebsiteImage4.png  
+├── 📄 frontend.html                                    # Frontend HTML code  
+├── 📄 class_names.pkl                                  # Pickle file for label names  
+├── 📄 imputer.pkl                                      # Preprocessing - missing value handler  
+├── 📄 scaler.pkl                                       # Preprocessing - feature scaler  
 ---
 
 ## ▶ How to Run
